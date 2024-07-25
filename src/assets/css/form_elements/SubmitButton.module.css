@@ -1,0 +1,13 @@
+.button_control{
+    padding: .7em 2em;
+    margin-top: .9em;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.button_control:hover{
+    background-color: #ffbb33;
+}

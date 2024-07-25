@@ -1,0 +1,79 @@
+{
+  "projects": [
+    {
+      "id": "effe",
+      "name": "Uniforme Espacial",
+      "budget": "300000",
+      "category": {
+        "id": "4",
+        "name": "Planning"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "e7ce",
+      "name": "Computadores",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Programming"
+      },
+      "cost": null,
+      "services": []
+    },
+    {
+      "id": "e7e9",
+      "name": "AJ corporation",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Programming"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "91f7",
+      "name": "Viagem Espacial",
+      "budget": "12222",
+      "category": {
+        "id": "3",
+        "name": "Designer"
+      },
+      "cost": null,
+      "services": [
+        {}
+      ]
+    },
+    {
+      "id": "b9d3",
+      "name": "Novo projecto",
+      "budget": "2333",
+      "category": {
+        "id": "3",
+        "name": "Designer"
+      },
+      "cost": null,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Programming"
+    },
+    {
+      "id": "2",
+      "name": "Development"
+    },
+    {
+      "id": "3",
+      "name": "Designer"
+    },
+    {
+      "id": "4",
+      "name": "Planning"
+    }
+  ]
+}

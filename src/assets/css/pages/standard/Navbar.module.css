@@ -1,0 +1,37 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 1em;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list li{
+   
+}
+
+.logo {
+    width: 15%;
+    height: 90%;
+}
+
+.item{
+    margin-right: 1em;
+}
+
+.item a{
+    color: #fff;
+    text-decoration: none;
+    font-family: cursive;
+    transition: .3s linear
+}
+
+.item a:hover{
+    color: #ffbb33;
+}
