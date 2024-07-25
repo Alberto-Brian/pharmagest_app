@@ -1,5 +1,31 @@
 .main{
-    width: 100%;
+    width: 70%;
     height: 7%;
     border: 1px solid red;
+    border-radius: 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0;
+}
+
+.main a{
+    color: white;
+    text-decoration: none;
+    transition: all .3s linear;
+
+    border: 1px solid rgb(77, 255, 0);
+}
+
+.main .icon{
+    font-size: 1.3em;
+    color: white;
+    margin-right: .5em;
+    transition: all .3s linear;
+}
+
+.main a:hover, 
+.main .icon:hover{
+    color: blue;
 }

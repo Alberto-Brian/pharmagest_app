@@ -15,7 +15,9 @@ function Home(){
            </div>
            <div className={styles.main}>
                 <div>
-                  <HomeButton icon='BiLogInCircle' text='Login' />
+                  <HomeButton to='/Login' icon='BiLogInCircle' title='Login' />
+                  <HomeButton to='/Login' icon='BiLogInCircle' title='Login' />
+                  <HomeButton to='/Login' icon='BiLogInCircle' title='Login' />
                 </div>
                 <div></div>
                 <div></div>
