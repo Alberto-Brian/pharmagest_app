@@ -1,9 +1,9 @@
 .main{
-    width: 70%;
+    width: 100%;
     height: 7%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 10px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,8 +14,7 @@
     color: white;
     text-decoration: none;
     transition: all .3s linear;
-
-    border: 1px solid rgb(77, 255, 0);
+    /* border: 1px solid rgb(77, 255, 0); */
 }
 
 .main .icon{
@@ -25,7 +24,10 @@
     transition: all .3s linear;
 }
 
-.main a:hover, 
-.main .icon:hover{
-    color: blue;
+.main a:hover{
+    color: rgb(82, 92, 130);;
+}
+
+.main a:hover .icon{
+    color: rgb(82, 92, 130);
 }

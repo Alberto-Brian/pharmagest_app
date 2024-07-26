@@ -1,0 +1,39 @@
+.main{
+    /* background-color: white; */
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.main a{
+    text-decoration: none;
+    border-radius: 5px;;
+    margin: 6px;
+}
+
+.prev, .next {
+    background-color: transparent;
+    color: white;
+}
+
+.current, .other, .reticence{  
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+
+.current{
+    background-color: rgb(137, 230, 166);
+    
+}
+
+.reticence{
+    cursor: none;
+    pointer-events: none;
+}
