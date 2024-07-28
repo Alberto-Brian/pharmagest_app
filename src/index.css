@@ -4,6 +4,9 @@
   font-weight: 400;
   overflow: hidden;
 
+  --primary-color: rgb(13, 19, 27);
+  --lateral-color: rgb(16, 23, 33);;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;

@@ -1,16 +1,15 @@
 import styles from '../../css/form_elements/HomeCard.module.css';
+import { Link } from 'react-router-dom';
 
-function HomeCard(){
+function HomeCard({image, name, w, h}){
     return(
-        <section className={styles.main}>
+        <Link className={styles.main} style={{width: w, height: h}}>
             <section>
-
+                {name && <h4>{name}</h4> }
+                <img src={image} alt="" />
+                {!name && <p> sem descrição </p>}
             </section>
-            <section>
-                <h4>Farmácia</h4>
-                <p>Colocar a descrição da Farmácia aqui</p>
-            </section>
-        </section>
+        </Link>
     )
 }
 

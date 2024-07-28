@@ -9,48 +9,6 @@ function Pagination({totalItems,
                      prev, 
                      totalCurrentResults  }){
 
-
-     function pagination (currentPage, totalItems) {
-        switch(current){
-            case 1 : 
-            return <>
-                    <Link to='' className={styles.other}> {currentPage} </Link>
-                    <Link to='' className={styles.current}> {currentPage + 1} </Link>
-                    <Link to='' className={styles.other}> {currentPage + 2} </Link>
-                    <Link to='' className={styles.other}> ... </Link>
-                    <Link to='' className={styles.other}> {totalItems} </Link>
-                    <Link to='' className={styles.next}> Próximo </Link>
-                </>
-
-            case totalItems : 
-            return <>
-                    <Link to='' className={styles.prev}> Anterior </Link>
-                    <Link to='' className={styles.other}> {totalItems - (totalItems - 1) } </Link>
-                    <Link to='' className={styles.other}> ... </Link>
-                    <Link to='' className={styles.other}> {totalItems - 2} </Link>
-                    <Link to='' className={styles.other}> {totalItems - 1} </Link>
-                    <Link to='' className={styles.current}> {totalItems} </Link>
-                </> 
-                
-                
-            case 2 : 
-            return <>
-                    <Link to='' className={styles.prev}> Anterior </Link>
-                    <Link to='' className={styles.other}> {current - 1} </Link>
-                    <Link to='' className={styles.current}> {current} </Link>
-                    
-                    {current+1 && <Link to='' className={styles.current}> {current+1} </Link> }
-                    {current+2 && <Link to='' className={styles.current}> {current+2} </Link> }
-                    {current+3 && <Link to='' className={styles.current}> {current+3} </Link> }
-                    {current+3 && <Link to='' className={styles.current}> ... </Link> }
-
-                    <Link to='' className={styles.other}> {totalItems} </Link>
-                    <Link to='' className={styles.next}> Próximo </Link>
-
-                </>
-        }
-     }
-
     return (
         <section className={styles.main}>
 
