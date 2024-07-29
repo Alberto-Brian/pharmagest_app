@@ -10,9 +10,6 @@ function TruncateName({name, limit}){
     return name.substring(0, limit) + '...';
 }
 function Subscription({to, image, name}){
-
-    
-
     return (
         <Link to={to} className={styles.main}>
             <div className={styles.image}>

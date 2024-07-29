@@ -5,7 +5,7 @@
 
 .signin{
     width: 60%;
-    height: 45%;
+    height: 60%;
     margin: 0 10px;
     display: flex;
     justify-content: center;
@@ -24,14 +24,14 @@
 }
 
 
-.signin:hover {
+.signin:hover, .signup:hover {
     border: 1px solid ;
 }
 
 .signup{
 
     width: 60%;
-    height: 45%;
+    height: 60%;
     margin: 0 10px;
     display: flex;
     justify-content: center;
@@ -48,6 +48,6 @@
     box-shadow: 3px 2px 10px 1px black;
 
     background-color: white;
-    border: 1px solid rgb(13, 19, 27);
+    /* border: 1px solid rgb(13, 19, 27); */
     color: var(--lateral-color);
 }

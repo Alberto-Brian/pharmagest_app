@@ -5,7 +5,10 @@
   overflow: hidden;
 
   --primary-color: rgb(13, 19, 27);
-  --lateral-color: rgb(16, 23, 33);;
+  --main-color: rgb(16, 23, 33);
+  --lateral-color: rgb(16, 23, 33);
+  /* --main-color: rgb(14, 13, 13);
+  --lateral-color: rgb(14, 13, 13); */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

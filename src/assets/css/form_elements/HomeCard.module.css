@@ -8,6 +8,7 @@
     text-align: center;
     text-decoration: none;
     overflow: hidden;
+    position:  relative;
 }
 
 .main section{
@@ -24,4 +25,16 @@
 .main img{
     width: 100%;
     height: 83%;
+}
+
+.main .info{
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid red; */
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.295);
+    backdrop-filter: blur(1px);
+    display: block;
+    position: absolute;
+    bottom: 0;
 }

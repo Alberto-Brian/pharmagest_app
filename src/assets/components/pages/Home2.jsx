@@ -29,7 +29,7 @@ import Novassol from '../../../../public/Novassol.png';
 
 function Home2(){
   // 21 - 42
-  const cardWidth = '20%';
+  const cardWidth = '22%';
   const cardHeight = '42%';
     return (
         <div className={styles.main}>
@@ -57,9 +57,9 @@ function Home2(){
                 
                 <hr className={styles.hr}/>
 
-                <HomeButton to='' icon='MdOutlineSettings' title='Definições'/>
                 <HomeButton to='' icon='IoMdHelpCircleOutline' title='Ajuda'/>
                 <HomeButton to='' icon='MdOutlineFeedback' title='Enviar feedback'/>
+                <HomeButton to='' icon='MdOutlineSettings' title='Definições'/>
 
                 <hr className={styles.hr}/>
                 <h6 className={styles.title}>Subscrições</h6>
@@ -103,14 +103,14 @@ function Home2(){
 
                   <div>
                   <FaMoon className={styles.moon_icon} /> 
-                  <Profile w='21%' h='32%'/>
+                  <Profile w='21%' h='50%'/>
                   </div>
                 </div>
            </div>
            <div className={styles.main}>
                 <div>
-                  <HomeCard w={cardWidth} h={cardHeight} image={ImageFarmacy} name='Farmácia Esmeralda' />
-                  <HomeCard w={cardWidth} h={cardHeight} image={FarmaciaPopular} name='Farmácia Popular'/ >
+                  <HomeCard w={cardWidth} h={cardHeight} image={ImageFarmacy} name='Farmácia Esmeraldakklll' />
+                  <HomeCard w={cardWidth} h={cardHeight} image={FarmaciaPopular} name='Farmácia Popular' />
                   <HomeCard w={cardWidth} h={cardHeight} image={FarmaciaSaoJoao} name='Medipharma'/>
                   <HomeCard w={cardWidth} h={cardHeight} image={HappyFarmacy} name='Testando'/>
                   <HomeCard name='IPharmcy' w={cardWidth} h={cardHeight} image={ImagesFarmcacy}/>

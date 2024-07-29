@@ -7,7 +7,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    margin: 3px 0;
+    margin: -7px 0;
 }
 
 .main a{
@@ -30,9 +30,9 @@
 }
 
 .main a:hover{
-    color: rgb(82, 92, 130);;
+    color: rgba(255, 255, 255, 0.486);
 }
 
 .main a:hover .icon{
-    color: rgb(82, 92, 130);
+    color: rgba(255, 255, 255, 0.486);
 }

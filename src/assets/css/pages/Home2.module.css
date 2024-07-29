@@ -31,7 +31,7 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
 }
 
@@ -39,17 +39,25 @@
     background-color: transparent;
     outline: none;
     border: none;
+    transition: all .1s linear;
 }
+
 
 .main .menu .logo_box .menu_icon{
     color: white;
     font-size: 5em;
     width: 50%;
-    margin-left: .1em;
+    /* margin-left: .1em; */
+    /* margin-right: 2em; */
+    transition: .2s;
+}
+
+.main .menu .logo_box .menu_icon:hover{
+    color: rgba(255, 255, 255, 0.623);
 }
 
 .main .menu .logo_box a{
-   text-decoration: none;
+   /* text-decoration: none; */
 }
 
 .main .menu .logo_box a .logo_name_box{
@@ -60,7 +68,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-
+    margin-right: 2em;
 }
 
 .main .menu .logo_box .logo_name_box .logo{
@@ -93,6 +101,7 @@
 
 .main .menu .menu_box .pharmagest_box{
     display: none;
+    display: block;
     /* border: 1px solid red; */
     /* font-size: .9em; */
     /* font-weight: bold; */
@@ -131,7 +140,7 @@
     align-items: center;
     padding: 0 .1em;
     margin: 0;
-    background-color: rgb(16, 23, 33);
+    background-color: var(--main-color);
 }
 
 
@@ -211,7 +220,7 @@
     /* border: 1px solid white; */
     display: flex;
     flex-wrap: wrap;
-    padding-left: 20px;
+    padding-left: 10px;
     /* justify-content: center */
 }
 
@@ -221,22 +230,23 @@
     /* border: 1px solid white; */
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
     /* padding-top: 1.5em */
 }
 
 .home_container .footer div{
-    height: 30%;
+    height: 100%;
     /* border: 1px solid white; */
     /* margin: 0 10em; */
 }
 
-.home_container .footer div:nth-child(1){
+.home_container .footer div:first-child{
     width:20%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     /* transform: translate(-5em, .4em); */
+    /* border: 1px solid white; */
 }
 
 .home_container .footer div:first-child .button_card_position{
@@ -245,7 +255,7 @@
     font-size: 1.6em;
 }
 
-.home_container .footer div:nth-child(2){
+.home_container .footer div:last-child{
     width: 66.1%;
     /* height: 40%; */
     /* margin-right: 2em; */
