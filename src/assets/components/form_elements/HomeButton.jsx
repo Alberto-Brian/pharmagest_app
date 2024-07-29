@@ -3,13 +3,17 @@ import { TbLogout2 } from "react-icons/tb";
 import { IoCreateSharp } from "react-icons/io5";
 import { BiLogIn } from "react-icons/bi";
 import { CgMicrosoft } from "react-icons/cg";
-import { TiHome } from "react-icons/ti"
+import { RiHomeHeartLine } from "react-icons/ri";
 import { BiSolidHomeHeart } from "react-icons/bi";
+import { GiMedicalPackAlt } from "react-icons/gi";
 import { LuHistory } from "react-icons/lu";
 import { FaHouseMedical } from "react-icons/fa6";
 import { IoNewspaper } from "react-icons/io5";
+import { IoNewspaperOutline } from "react-icons/io5";
 import { IoSettings } from "react-icons/io5";
+import { MdOutlineSettings } from "react-icons/md";
 import { IoMdHelpCircle } from "react-icons/io";
+import { IoMdHelpCircleOutline } from "react-icons/io";
 import { MdOutlineFeedback } from "react-icons/md";
 
 import { Link } from 'react-router-dom';
@@ -27,15 +31,24 @@ function HomeButton ({to, icon, title, w, h}){
             
             case 'IoNewspaper': 
             return <IoNewspaper className={styles.icon} style={{width: w, height: h}}/>;
+           
+            case 'IoNewspaperOutline': 
+            return <IoNewspaperOutline className={styles.icon} style={{width: w, height: h}}/>;
             
             case 'IoSettings': 
             return <IoSettings className={styles.icon} style={{width: w, height: h}}/>;
+           
+            case 'MdOutlineSettings': 
+            return <MdOutlineSettings className={styles.icon} style={{width: w, height: h}}/>;
            
             case 'FaHouseMedical': 
             return <FaHouseMedical className={styles.icon} style={{width: w, height: h}}/>;
             
             case 'IoMdHelpCircle': 
             return <IoMdHelpCircle className={styles.icon} style={{width: w, height: h}}/>;
+            
+            case 'IoMdHelpCircleOutline': 
+            return <IoMdHelpCircleOutline className={styles.icon} style={{width: w, height: h}}/>;
             
             case 'BiLogIn':
             return <BiLogIn className={styles.icon} style={{width: w, height: h}}/>;
@@ -49,11 +62,14 @@ function HomeButton ({to, icon, title, w, h}){
             case 'CgMicrosoft':
             return <CgMicrosoft className={styles.icon} style={{width: w, height: h}}/>; 
 
-            case 'TiHome':
-            return <TiHome className={styles.icon} style={{width: w, height: h}}/>;
+            case 'RiHomeHeartLine':
+            return <RiHomeHeartLine className={styles.icon} style={{width: w, height: h}}/>;
            
             case 'LuHistory':
             return <LuHistory className={styles.icon} style={{width: w, height: h}}/>;
+           
+            case 'GiMedicalPackAlt':
+            return <GiMedicalPackAlt className={styles.icon} style={{width: w, height: h}}/>;
         }
     }
 

@@ -18,7 +18,7 @@
 
 /* Personalizando a barra de rolagem inteira */
 ::-webkit-scrollbar {
-    width: 30px; /* Largura da barra de rolagem vertical */
+    width: 15px; /* Largura da barra de rolagem vertical */
     height: 12px; /* Altura da barra de rolagem horizontal */
   }
   

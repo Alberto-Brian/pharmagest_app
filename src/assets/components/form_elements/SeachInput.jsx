@@ -9,6 +9,7 @@ function SearchInput({w}){
         const placeholder = document.querySelector('#placeholder');
         const input = document.querySelector('input');
         input.addEventListener('input', () => {
+            input.style.backgroundColor = 'white';
             if(placeholder) placeholder.style.display = 'none';
             if(!input.value) placeholder.style.display = 'inline-block';
         })
