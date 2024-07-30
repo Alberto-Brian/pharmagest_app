@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa";
 import styles from '../../css/form_elements/SearchInput.module.css';
 
-function SearchInput({w}){
+function SearchInput({w, h}){
 
     
     useEffect(() => {
@@ -16,8 +16,8 @@ function SearchInput({w}){
     }, [])
 
     return (
-        <section className={styles.main} style={{width: w}}>
-            <input type="text" name='search' placeholder="Procurar                       "/>
+        <section className={styles.main} style={{width: w, height: h}}>
+            <input style={{height: h}} type="text" name='search' placeholder="Procurar                       "/>
             <span id='placeholder'  className={styles.holder}> Farmácias | Produtos </span>
             <span className={styles.icon}> <FaSearch /> </span>
         </section>

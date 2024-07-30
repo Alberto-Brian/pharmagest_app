@@ -1,8 +1,8 @@
 import styles from '../../css/form_elements/ProvinceList.module.css';
 import { Link } from 'react-router-dom';
-function ProvinceList(){
+function ProvinceList({w, h}){
     return(
-        <select className={styles.main}>
+        <select className={styles.main} style={{width: w, height: h}}>
            <option value = 'Bengo'> Todas Farmácias </option>
            <option value = 'Bengo'> Bengo </option>
            <option value = 'Benguela'> Benguela </option>

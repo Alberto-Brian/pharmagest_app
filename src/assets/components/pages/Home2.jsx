@@ -29,7 +29,7 @@ import Novassol from '../../../../public/Novassol.png';
 
 function Home2(){
   // 21 - 42
-  const cardWidth = '22%';
+  const cardWidth = '21.5%';
   const cardHeight = '42%';
     return (
         <div className={styles.main}>
@@ -66,8 +66,8 @@ function Home2(){
 
                 <Subscription to='' image='' name='Farmácia Esmeralda'/>
                 <Subscription to='' image='../../../../public/pharmacist.png' name='Farmácia Novassol'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                <Subscription to='' image='../../../../public/novassol.png' name='Farmácia Esmeralda'/>
+                <Subscription to='' image='../../../../public/.png' name='Farmácia Esmeralda'/>
                 <Subscription to='' image='' name='Farmácia Esmeralda'/>
                 <Subscription to='' image='' name='Farmácia Esmeralda'/>
                 <Subscription to='' image='' name='Farmácia Esmeralda'/>
@@ -93,17 +93,17 @@ function Home2(){
           </section>
           <div className={styles.home_container}>
            <div className={styles.header}>
-                <div> <SearchInput w='94%'/> </div>
-                <div> <ProvinceList /> </div>
+                <div> <SearchInput w='94%' h='67%'/> </div>
+                <div> <ProvinceList h='47%'/> </div>
                 <div > 
                   <div>
-                    <LoginButton to='#' title='Entrar' isLogin={true} />  
-                    <LoginButton to='#' title='Inscrever-se' isLogin={false} />  
+                    <LoginButton h='45%' to='#' title='Entrar' isLogin={true} />  
+                    <LoginButton h='45%' to='#' title='Inscrever-se' isLogin={false} />  
                   </div>
 
                   <div>
-                  <FaMoon className={styles.moon_icon} /> 
-                  <Profile w='21%' h='50%'/>
+                    <FaMoon className={styles.moon_icon} /> 
+                    <Profile w='26%' h='40%'/>
                   </div>
                 </div>
            </div>

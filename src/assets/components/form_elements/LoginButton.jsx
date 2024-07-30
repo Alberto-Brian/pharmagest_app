@@ -1,14 +1,14 @@
 import styles from '../../css/form_elements/LoginButton.module.css';
 import { Link } from 'react-router-dom';
 
-function LoginButton({to, title, isLogin}){
+function LoginButton({to, title, isLogin, w, h}){
     return (
          <> 
             {isLogin ? (
-            <Link to={to} className={styles.signin}> 
+            <Link to={to} className={styles.signin} style={{width: w, height: h}}> 
                 {title}  
             </Link>) : (
-            <Link to={to} className={styles.signup}> 
+            <Link to={to} className={styles.signup} style={{width: w, height: h}} > 
                 {title} 
             </Link>) }
          </>
