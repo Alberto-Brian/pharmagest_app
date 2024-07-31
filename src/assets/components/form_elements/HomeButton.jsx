@@ -18,7 +18,7 @@ import { MdOutlineFeedback } from "react-icons/md";
 
 import { Link } from 'react-router-dom';
 
-function HomeButton ({to, icon, title, w, h}){
+function HomeButton ({to, icon, title, showName, w, h}){
 
 
     const setIcon = (icon) => {
@@ -77,7 +77,7 @@ function HomeButton ({to, icon, title, w, h}){
         <section className={styles.main}>
             <Link to={to}>
                 {setIcon(icon)}
-                 {title} 
+                 {showName && title} 
             </Link>
         </section>
     )

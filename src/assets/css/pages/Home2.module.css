@@ -1,6 +1,3 @@
-:root{
-    --logo-height: 13%;
-}
 
 .clearfix::after {
     content: "";
@@ -12,132 +9,13 @@
     display: flex;
 }
 
-.main .menu{
-   width: 25%;
-   height: 100%;
-   /* border: 1px solid white; */
-    background-color: var(--lateral-color);
-}
-
-.main .menu div{
-    display: flex;
-    flex-direction: column;
-}
-
-.main .menu .logo_box{
-    /* border: 1px solid  red; */
-    width: 100%;
-    height: var(--logo-height);
-
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
-
-.main .menu .logo_box button{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    transition: all .1s linear;
-}
-
-
-.main .menu .logo_box .menu_icon{
-    color: white;
-    font-size: 5em;
-    width: 50%;
-    /* margin-left: .1em; */
-    /* margin-right: 2em; */
-    transition: .2s;
-}
-
-.main .menu .logo_box .menu_icon:hover{
-    color: rgba(255, 255, 255, 0.623);
-}
-
-.main .menu .logo_box a{
-   /* text-decoration: none; */
-}
-
-.main .menu .logo_box a .logo_name_box{
-    /* color: white; */
-    width: 100%;
-    /* border: 1px solid white; */
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin-right: 2em;
-}
-
-.main .menu .logo_box .logo_name_box .logo{
-    color: rgb(23, 127, 224);
-    font-size: 2em;
-    margin-right: 5px;
-}
-
-.main .menu .logo_box .logo_name_box .name{
-    color: white;
-}
-
-.main .menu .menu_box{
-    width: 100%;
-    display: block;
-    /* border: 1px solid  white; */
-    /* padding: 0 15px; */
-    height: calc(100% - var(--logo-height));
-    
-    content: "";
-    clear: both;
-    /* display: table; */
-    overflow: auto;
-}
-
-.main .menu .menu_box .title{
-    color: white;
-    margin-left: 23px;
-}
-
-.main .menu .menu_box .pharmagest_box{
-    display: none;
-    display: block;
-    /* border: 1px solid red; */
-    /* font-size: .9em; */
-    /* font-weight: bold; */
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 45%;
-    padding-left: 1.5em;
-    color: white;
-}
-
-.main .menu .menu_box .pharmagest_box a{
-    color: rgba(255, 255, 255, 0.579);
-    text-decoration: none;
-}
-
-.main .menu .menu_box .pharmagest_box p{
-    color: rgba(255, 255, 255, 0.234);
-    line-height: 2.5;
-}
-
-.main .menu .menu_box .hr{
-    display: block;
-    color: white; 
-    background: white !important;
-    margin: 10px;
-    height: 2px;
-}
-
-
 .home_container{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     padding: 0 .1em;
     margin: 0;
     background-color: var(--main-color);
@@ -151,29 +29,100 @@
 
 .home_container .header{
     width: 100%;
-    height: 15%;
+    height: 20%;
+    margin: 0;
+    margin-top: 5px;
     display: flex;
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 .home_container .header div{
     /* border: 1px solid rgb(255, 255, 255); */
 }
 
 
-.home_container .header div:nth-child(1){
+.main .header .logo_box{
+    /* border: 1px solid  red; */
+    width: 26%;
+    height: var(--logo-height);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .header .logo_box .button{
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 100%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main .header .logo_box .menu_icon{
+    color: white;
+    font-size: 1.8em;
+    width: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.main .header .logo_box .menu_icon:hover{
+    color: rgba(255, 255, 255, 0.623);
+}
+
+.main .header .logo_box a{
+   /* text-decoration: none; */
+   /* border: 1px solid white; */
+   /* display: flex; */
+   padding-top: 4%;
+   height: 100%;
+   width: 75%;
+}
+
+.main .header .logo_box a .logo_name_box{
+    /* color: white; */
+    width: 100%;
+    height: 80%;
+    font-size: 1.1em;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 2em; */
+}
+
+.main .header .logo_box .logo_name_box .logo{
+    color: rgb(23, 127, 224);
+    font-size: 2em;
+    margin-right: 7px;
+}
+
+.main .header .logo_box .logo_name_box .name{
+    color: white;
+    font-size: 1.5em;
+}
+
+.home_container .header div:nth-child(2){
     width: 45%;
     display: flex;
     justify-content: end;
     align-items:center;
 }
 
-.home_container .header div:nth-child(2){
+.home_container .header div:nth-child(3){
     width: 17%;
     /* background-color: var(--lateral-color); */
     display: flex;
     justify-content: start;
     align-items: center;
 }
-.home_container .header div:nth-child(3){
+.home_container .header div:nth-child(4){
     width: 40%;
     display: flex;
     justify-content: space-between;
@@ -181,7 +130,7 @@
     /* padding-left: 1em; */
 }
 
-.home_container .header div:nth-child(3) div:first-child{
+.home_container .header div:nth-child(4) div:first-child{
     width: 65%;
     height: 100%;
     display: flex;
@@ -189,7 +138,7 @@
     align-items: center;
 }
 
-.home_container .header div:nth-child(3) div:last-child{
+.home_container .header div:nth-child(4) div:last-child{
     width: 35%;
     height: 100%;
     display: flex;
@@ -206,7 +155,7 @@
 
 .home_container .main{
     width: 100%;
-    height: 80%;
+    height: 78%;
     /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
@@ -216,7 +165,7 @@
 .home_container .main div{
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* border: 1px solid white; */
     display: flex;
     flex-wrap: wrap;
@@ -225,7 +174,7 @@
 }
 
 .home_container .footer{
-    width: 100%;
+    width: 81.3%;
     height: 14%;
     /* border: 1px solid white; */
     display: flex;

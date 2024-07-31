@@ -2,9 +2,12 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --logo-height-b: 13%;
+  --logo-height: 100%;
   overflow: hidden;
 
   --primary-color: rgb(13, 19, 27);
+  --profile-info-color: rgb(21, 31, 44);
   --main-color: rgb(16, 23, 33);
   --lateral-color: rgb(16, 23, 33);
   /* --main-color: rgb(14, 13, 13);

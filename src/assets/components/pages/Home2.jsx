@@ -1,4 +1,5 @@
 import styles from '../../css/pages/Home2.module.css';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaMoon } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
@@ -6,12 +7,11 @@ import { PiTidalLogoFill } from "react-icons/pi";
 import { CgMicrosoft } from "react-icons/cg";
 import SearchInput from '../form_elements/SeachInput';
 import Profile from '../form_elements/Profile';
-import HomeButton from '../form_elements/HomeButton';
 import LoginButton from '../form_elements/LoginButton';
 import Pagination from '../form_elements/Pagination';
 import ProvinceList from '../form_elements/ProvinceList';
 import HomeCard from '../form_elements/HomeCard';
-import Subscription from '../form_elements/Subscription';
+import Menu from '../pages/Menu';
 
 //IMAGES
 import ImageFarmacy from '../../../../public/imageFarmacy.jpg';
@@ -29,15 +29,39 @@ import Novassol from '../../../../public/Novassol.png';
 
 function Home2(){
   // 21 - 42
-  const cardWidth = '21.5%';
+  const cardWidth = '22%';
   const cardHeight = '42%';
+
+  const searchWidth = '95%'
+  const searchHeight = '82%'
+
+  const provinceListWidth = '40%';
+  const provinceListHeight = '60%';
+
+  const loginButtonWidth = '50%';
+  const loginButtonHeight = '64%';
+
+  const profileWidth = '22%';
+  const profileHeight = '50%';
+
+  // const menu_button_ref = useRef(null);
+  let menu_show = true;
+  useEffect(()=> {
+      const menu_button_ref = document.querySelector('#menu_button_ref');
+      menu_button_ref.addEventListener('click', () => {
+        menu_show = !menu_show
+        console.log(menu_show);
+      });
+  }, [])
+
     return (
         <div className={styles.main}>
-          <section className={styles.menu}> 
+          <div className={styles.home_container}>
+           <div className={styles.header}>
             <div className={styles.logo_box}>
-              <button> 
-                 <HiOutlineMenu className={styles.menu_icon}/>
-              </button>
+              <div className={styles.button}> 
+                 <HiOutlineMenu id='menu_button_ref' className={styles.menu_icon}/>
+              </div>
 
               <Link to='#'>
                 <div className={styles.logo_name_box}>
@@ -46,68 +70,22 @@ function Home2(){
                 </div>
               </Link>
             </div>
-            <div className={styles.menu_box}>
-                <HomeButton to='' icon='RiHomeHeartLine' title='Casa'/>
-                <HomeButton to='' icon='LuHistory' title='Histórico'/>
-                
-                <hr className={styles.hr}/>
-
-                <HomeButton to='' icon='GiMedicalPackAlt' title='A sua Farmácia'/>
-                <HomeButton to='' icon='IoNewspaperOutline' title='Notícias'/>
-                
-                <hr className={styles.hr}/>
-
-                <HomeButton to='' icon='IoMdHelpCircleOutline' title='Ajuda'/>
-                <HomeButton to='' icon='MdOutlineFeedback' title='Enviar feedback'/>
-                <HomeButton to='' icon='MdOutlineSettings' title='Definições'/>
-
-                <hr className={styles.hr}/>
-                <h6 className={styles.title}>Subscrições</h6>
-
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='../../../../public/pharmacist.png' name='Farmácia Novassol'/>
-                <Subscription to='' image='../../../../public/novassol.png' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='../../../../public/.png' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                <Subscription to='' image='' name='Farmácia Esmeralda'/>
-
-                <hr className={styles.hr}/>
-                <h6 className={styles.title}>Sobre Pharmagest</h6>
-
-                <div className={styles.pharmagest_box}>
-                  <Link to=''>Direitos do autor</Link>
-                  <Link to=''>Contactar-nos</Link>
-                  <Link to=''>Termos</Link>
-                  <Link to=''>Privacidade</Link>
-
-                  <Link to=''>Política e segurança</Link>
-                  <Link to=''>Como funciona a Pharmagest</Link>
-                  <Link to=''>Testar novas funcionalidades</Link>
-
-                  <p>&copy; 2024 Pharmaghest</p>
-                </div>
-            </div>
-          </section>
-          <div className={styles.home_container}>
-           <div className={styles.header}>
-                <div> <SearchInput w='94%' h='67%'/> </div>
-                <div> <ProvinceList h='47%'/> </div>
+                <div> <SearchInput w={searchWidth} h={searchHeight}/> </div>
+                <div> <ProvinceList h={provinceListHeight}/> </div>
                 <div > 
                   <div>
-                    <LoginButton h='45%' to='#' title='Entrar' isLogin={true} />  
-                    <LoginButton h='45%' to='#' title='Inscrever-se' isLogin={false} />  
+                    <LoginButton h={loginButtonHeight} to='#' title='Entrar' isLogin={true} />  
+                    <LoginButton h={loginButtonHeight} to='#' title='Inscrever-se' isLogin={false} />  
                   </div>
 
                   <div>
                     <FaMoon className={styles.moon_icon} /> 
-                    <Profile w='26%' h='40%'/>
+                    <Profile w={profileWidth} h={profileHeight}/>
                   </div>
                 </div>
            </div>
            <div className={styles.main}>
+               <Menu show={menu_show}/>
                 <div>
                   <HomeCard w={cardWidth} h={cardHeight} image={ImageFarmacy} name='Farmácia Esmeraldakklll' />
                   <HomeCard w={cardWidth} h={cardHeight} image={FarmaciaPopular} name='Farmácia Popular' />

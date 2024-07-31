@@ -12,10 +12,10 @@ function TruncateName({name, limit}){
 function Subscription({to, image, name}){
     return (
         <Link to={to} className={styles.main}>
-            <div className={styles.image}>
+            <section className={styles.profile}>
                 {image ? <img src={image} alt="" /> :
                 <img src={logoPharma} style={{opacity: .6}} alt="" /> }
-            </div>
+            </section>
            <TruncateName name={name} limit={15} /> 
         </Link>
     )

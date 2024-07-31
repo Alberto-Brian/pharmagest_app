@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+    width: 23%;
+    height: 110%;
+    /* border: 1px solid white; */
+    background-color: var(--lateral-color);
+    /* padding: 0 15px; */
+    
+
+    content: "";
+    clear: both;
+    /* display: table; */
+    overflow: auto;
+}
+
+.main  .title{
+    color: white;
+    margin-left: 23px;
+}
+
+.main .subscription_box{
+    display: none !important;
+    border: 1px solid white;
+}
+
+.main  .pharmagest_box{
+    display: none;
+    display: block;
+    /* border: 1px solid red; */
+    /* font-size: .9em; */
+    /* font-weight: bold; */
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 45%;
+    padding-left: 1.5em;
+    color: white;
+}
+
+.main  .pharmagest_box a{
+    color: rgba(255, 255, 255, 0.579);
+    text-decoration: none;
+}
+
+.main  .pharmagest_box p{
+    color: rgba(255, 255, 255, 0.234);
+    line-height: 2.5;
+}
+
+.main  .hr{
+    display: block;
+    color: white; 
+    background: white !important;
+    margin: 10px;
+    height: 2px;
+}
