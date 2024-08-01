@@ -12,6 +12,8 @@
     clear: both;
     /* display: table; */
     overflow: auto;
+
+    /* transition: all 100ms linear; */
 }
 
 .main  .title{

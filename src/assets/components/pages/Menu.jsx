@@ -76,7 +76,7 @@ function Menu({show}){
       </section>
 
       ) : (
-        <section className={styles.main} style={{width: '7%', overflow: 'hidden'}} ref={shortShow}>
+        <section className={styles.main} style={{width: '6%', overflow: 'hidden'}} ref={shortShow}>
                     <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='Casa'/>
                     <HomeButton showName={show} to='' icon='LuHistory' title='Histórico'/>
                     

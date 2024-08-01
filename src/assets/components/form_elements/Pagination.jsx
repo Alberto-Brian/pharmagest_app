@@ -23,7 +23,7 @@ function Pagination({totalItems,
             {(currentPage+1) < totalItems && <Link to='' className={styles.other}> {currentPage+1} </Link> }
             {(currentPage+2) < totalItems && <Link to='' className={styles.other}> {currentPage+2} </Link> }
             {(currentPage+4) <= totalItems && <Link to='' className={styles.reticence}> ... </Link> }
-            {(currentPage > 0 && currentPage < totalItems) && <Link to='' className={styles.reticence}>{totalItems}</Link> }
+            {(currentPage > 0 && currentPage < totalItems) && <Link to='' className={styles.other}>{totalItems}</Link> }
 
             {(currentPage+1) <= totalItems && <Link to='' className={styles.next}> Próximo </Link> }
     

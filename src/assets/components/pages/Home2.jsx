@@ -12,6 +12,7 @@ import Pagination from '../form_elements/Pagination';
 import ProvinceList from '../form_elements/ProvinceList';
 import HomeCard from '../form_elements/HomeCard';
 import Menu from '../pages/Menu';
+import News from '../utils/News';
 
 //IMAGES
 import ImageFarmacy from '../../../../public/imageFarmacy.jpg';
@@ -29,8 +30,12 @@ import Novassol from '../../../../public/Novassol.png';
 import { BiMenu } from 'react-icons/bi';
 
 function Home2(){
-  // 21 - 42
-  const cardWidth = '22%';
+  const [menu_show, setMenu_show] = useState(false);
+  let cardWidth = '22%';
+  let mainWidth = '100%';
+
+  {!menu_show && (cardWidth = '221.6px')}
+  {!menu_show && (mainWidth = '74%')}
   const cardHeight = '42%';
 
   const searchWidth = '95%'
@@ -45,7 +50,6 @@ function Home2(){
   const profileWidth = '22%';
   const profileHeight = '43%';
 
-  const [menu_show, setMenu_show] = useState(false);
 
   useEffect(()=> {
     const menu_button_ref = document.querySelector('#menu_button_ref');
@@ -93,7 +97,7 @@ function Home2(){
            </div>
            <div className={styles.main}>
                <Menu show={menu_show}/>
-                <div>
+                <div style={{width: mainWidth}}>
                   <HomeCard w={cardWidth} h={cardHeight} image={ImageFarmacy} name='Farmácia Esmeraldakklll' />
                   <HomeCard w={cardWidth} h={cardHeight} image={FarmaciaPopular} name='Farmácia Popular' />
                   <HomeCard w={cardWidth} h={cardHeight} image={FarmaciaSaoJoao} name='Medipharma'/>
@@ -107,6 +111,8 @@ function Home2(){
                   <HomeCard w='22%' h='45%' image={MyPharmacy}/>
                   <HomeCard w='22%' h='45%' image={Inquerito}/> */}
                 </div>
+                {!menu_show && <News />}
+            
            </div>
            <div className={styles.footer}>
                <div>
@@ -119,7 +125,7 @@ function Home2(){
                  </Link>
                </div>
                <div>
-                  <Pagination currentPage={22} totalItems={100}/>
+                  <Pagination currentPage={45} totalItems={100}/>
                </div>
            </div>
 

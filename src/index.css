@@ -30,6 +30,12 @@ body {
   background-color: #dcdcdc;
 }
 
+.hr{
+  display: block;
+  color: white; 
+  margin:10px 0;
+}
+
 
 
 @media (prefers-color-scheme: light) {

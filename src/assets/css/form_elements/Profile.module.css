@@ -36,6 +36,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
+    display: none;
 }
 
 .optionsView .profile_name{

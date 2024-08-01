@@ -19,11 +19,13 @@ function Profile({w, h, image}){
         const name = document.querySelector('#name');
         let display = false;
 
+        
         document.addEventListener('click', (e) => {
             if(e.target === img_profile_ref.current  || 
                e.target === btn_profile_ref.current  ||
                e.target === name_profile_ref.current){ 
-                    display = !display ;
+                    // display = !display ;
+                    display = true;
                 } else if( e.target === view_profile_ref.current ||
                        e.target === view_box_ref.current) {
                            display = true;
