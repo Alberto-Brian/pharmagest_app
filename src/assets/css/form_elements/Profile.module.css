@@ -1,5 +1,5 @@
 .main {
-    /* background-color: white; */
+    background-color: white;
     width: 5%;
     border-radius: 50%;
     border: none;
@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     z-index: 20;
+    /* padding: 2px; */
     position: relative;
     transition: all .1s linear;
 }
@@ -20,17 +21,16 @@
 }
 
 .optionsView{
+    border: 1px solid white;
     width: 16.5em;
-    height: 80%;
+    height: 75%;
     z-index: 10;
     border-radius: 20px;
     background-color: var(--profile-info-color);
     padding-top: .4em;
-    padding-right: .5em;
     position: absolute;
     top: .2em;
     right: 1em;
-    display: none;
     opacity: 0;
     transition: opacity 1s linear;
     flex-direction: column;
@@ -42,23 +42,26 @@
     border-radius: 10px;
     width: 75%;
     margin-top: .6em;
-    margin-right: .4em;
+    margin-right: .9em;
     height: 7%;
-    border: none;
-    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.392);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.055);
     color: white;
 }
 
 .optionsView .profile_content{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     height: 86%;
     width: 100%;
-    
+    margin-bottom: 1em;
+    padding: 0;
 }
 
-
-
-.position{
-    transform: translateX(-14em);
+.optionsView .profile_content .hr{
+    display: block;
+    color: white; 
+    margin:10px 0;
 }

@@ -2,12 +2,27 @@ import styles from '../../css/pages/Menu.module.css';
 import HomeButton from '../form_elements/HomeButton';
 import Subscription from '../form_elements/Subscription';
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 function Menu({show}){
+
+  const shortShow = useRef(null);
+    function handleClick(){
+      if(shortShow.current){
+        shortShow.current.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      }
+    } 
+
+    console.log(shortShow.current)
+    handleClick();
+
     return (
       <>
       
       {show ? (
-      <section className={styles.main}>
+      <section className={styles.main} ref={shortShow}>
                     <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='Casa'/>
                     <HomeButton showName={show} to='' icon='LuHistory' title='Histórico'/>
                     
@@ -61,7 +76,7 @@ function Menu({show}){
       </section>
 
       ) : (
-        <section className={styles.main} style={{width: '7%'}}>
+        <section className={styles.main} style={{width: '7%', overflow: 'hidden'}} ref={shortShow}>
                     <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='Casa'/>
                     <HomeButton showName={show} to='' icon='LuHistory' title='Histórico'/>
                     
@@ -77,19 +92,21 @@ function Menu({show}){
                     <HomeButton showName={show} to='' icon='MdOutlineSettings' title='Definições'/>
 
 
-                { show && (
+                { !show && (
                   <>
-                  <hr className={styles.hr}/>
-                  <h6 className={styles.title}>Subscrições</h6>
-                  <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='../../../../public/pharmacist.png' name='Farmácia Novassol'/>
-                  <Subscription to='' image='../../../../public/novassol.png' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='../../../../public/.png' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='' name='Farmácia Esmeralda'/>
-                  <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                  {/* <hr className={styles.hr}/> */}
+                  {/* <h6 className={styles.title}>Subscrições</h6> */}
+                  <div className={styles.subscription_box}>
+                      <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='../../../../public/pharmacist.png' name='Farmácia Novassol'/>
+                      <Subscription to='' image='../../../../public/novassol.png' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='../../../../public/.png' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                      <Subscription to='' image='' name='Farmácia Esmeralda'/>
+                  </div>
                   </>
                 )}
 

@@ -1,5 +1,5 @@
 import styles from '../../css/pages/Home2.module.css';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaMoon } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
@@ -26,6 +26,7 @@ import MyPharmacy from '../../../../public/my pharmacy.jfif';
 import Pharmacist from '../../../../public/pharmacist.png';
 import Publicidade from '../../../../public/publicidade.jfif';
 import Novassol from '../../../../public/Novassol.png';
+import { BiMenu } from 'react-icons/bi';
 
 function Home2(){
   // 21 - 42
@@ -33,27 +34,33 @@ function Home2(){
   const cardHeight = '42%';
 
   const searchWidth = '95%'
-  const searchHeight = '82%'
+  const searchHeight = '75%'
 
   const provinceListWidth = '40%';
-  const provinceListHeight = '60%';
+  const provinceListHeight = '53%';
 
   const loginButtonWidth = '50%';
-  const loginButtonHeight = '64%';
+  const loginButtonHeight = '57%';
 
   const profileWidth = '22%';
-  const profileHeight = '50%';
+  const profileHeight = '43%';
 
-  // const menu_button_ref = useRef(null);
-  let menu_show = true;
+  const [menu_show, setMenu_show] = useState(false);
+
   useEffect(()=> {
-      const menu_button_ref = document.querySelector('#menu_button_ref');
-      menu_button_ref.addEventListener('click', () => {
-        menu_show = !menu_show
-        console.log(menu_show);
-      });
-  }, [])
+    const menu_button_ref = document.querySelector('#menu_button_ref');
+    
+    const handleClick = () => {
+       setMenu_show(prevState => !prevState);
+    }
+      if(menu_button_ref) menu_button_ref.addEventListener('click', handleClick);
+      return () =>{
+        if(menu_button_ref) menu_button_ref.removeEventListener('click', handleClick);
+      } 
 
+    }, [])
+
+  console.log(menu_show);
     return (
         <div className={styles.main}>
           <div className={styles.home_container}>

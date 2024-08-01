@@ -1,13 +1,12 @@
 .main {
     display: flex;
     flex-direction: column;
-
+ 
     width: 23%;
     height: 110%;
     /* border: 1px solid white; */
     background-color: var(--lateral-color);
     /* padding: 0 15px; */
-    
 
     content: "";
     clear: both;
@@ -21,8 +20,15 @@
 }
 
 .main .subscription_box{
-    display: none !important;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    display: none;
+}
+
+.main .subscription_box > a {
+    opacity: 0;
+    pointer-events: none;
+    cursor: none;
+    overflow-wrap: calc();
 }
 
 .main  .pharmagest_box{
