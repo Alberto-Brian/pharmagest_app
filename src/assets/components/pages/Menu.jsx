@@ -3,6 +3,7 @@ import HomeButton from '../form_elements/HomeButton';
 import Subscription from '../form_elements/Subscription';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
+
 function Menu({show}){
 
   const shortShow = useRef(null);
@@ -23,12 +24,12 @@ function Menu({show}){
       
       {show ? (
       <section className={styles.main} ref={shortShow}>
-                    <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='Casa'/>
+                    <HomeButton showName={show} to='' icon='RiHomeSmile2Line' title='Casa'/>
                     <HomeButton showName={show} to='' icon='LuHistory' title='Histórico'/>
                     
                     <hr className={styles.hr}/>
 
-                    <HomeButton showName={show} to='' icon='GiMedicalPackAlt' title='A sua Farmácia'/>
+                    <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='A sua Farmácia'/>
                     <HomeButton showName={show} to='' icon='IoNewspaperOutline' title='Notícias'/>
                     
                     <hr className={styles.hr}/>
@@ -77,12 +78,12 @@ function Menu({show}){
 
       ) : (
         <section className={styles.main} style={{width: '6%', overflow: 'hidden'}} ref={shortShow}>
-                    <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='Casa'/>
+                    <HomeButton showName={show} to='' icon='RiHomeSmile2Line' title='Casa'/>
                     <HomeButton showName={show} to='' icon='LuHistory' title='Histórico'/>
                     
                     <hr className={styles.hr}/>
 
-                    <HomeButton showName={show} to='' icon='GiMedicalPackAlt' title='A sua Farmácia'/>
+                    <HomeButton showName={show} to='' icon='RiHomeHeartLine' title='A sua Farmácia'/>
                     <HomeButton showName={show} to='' icon='IoNewspaperOutline' title='Notícias'/>
                     
                     <hr className={styles.hr}/>

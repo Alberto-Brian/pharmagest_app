@@ -5,8 +5,9 @@
     border-radius: 20px 0 0 20px;
     border-radius:  5px;
     padding: 20px;
-    transform: translateX(-5px);
+    /* transform: translateX(-5px); */
     background-color: var(--profile-info-color);
+    background-color: var(--lateral-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,11 +15,17 @@
 }
 
 .main .image{
+    border-radius: 10px;
     width: 100%;
     height: 35%;
-    border: 1px solid rgb(97, 16, 16);
+    /* border: 1px solid rgb(97, 16, 16); */
 }
 
+.main .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 .main .content{
     width: 100%;
     height: 62%;

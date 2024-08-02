@@ -144,6 +144,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* border:  1px solid white;  */
 }
 
 .home_container .header .moon_icon{
@@ -152,6 +153,40 @@
     /* margin-left: 1em; */
 }
 
+.home_container .header .notification{
+    /* border: 1px solid red; */
+    margin-bottom: 5px;
+    width: 28px;
+    height: 30px;
+    position: relative;
+}
+
+.home_container .header .notification_number{
+    color: white;
+    z-index: 1;
+    font-size: 12px;
+    background-color: red;
+
+    border-radius: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 17px;
+    height: 15px;
+    top: 0;
+    right: 0;
+}
+
+.home_container .header .notification_icon{
+    color: white;
+    font-size: 1.6em;
+    position: absolute;
+    bottom: 0;
+    /* margin-left: 1em; */
+}
 
 .home_container .main{
     width: 100%;

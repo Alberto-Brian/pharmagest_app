@@ -1,6 +1,7 @@
 import styles from '../../css/form_elements/Province.module.css';
 import { Link } from 'react-router-dom';
-function Province(){
+
+const Province = () => {
     return(
         <section className={styles.main}>
             <Link to='Bengo'>Bengo</Link>

@@ -1,7 +1,17 @@
 import styles from '../../css/form_elements/Input.module.css'
-function Input({type="text", text, 
+
+interface InputProps {
+    type: string,
+    text: string,
+    name: string,
+    placeholder: string,
+    handleOnChange: () => string,
+    value: string
+}
+
+const Input: React.FC<InputProps> = ({type="text", text, 
                 name, placeholder='não definido',
-                handleOnChange, value}){
+                handleOnChange, value}) => {
     return (
         <div className={styles.form_control}>
             <label htmlFor={name}>{text} {text && ':'}</label>

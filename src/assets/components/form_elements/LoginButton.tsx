@@ -1,7 +1,14 @@
 import styles from '../../css/form_elements/LoginButton.module.css';
 import { Link } from 'react-router-dom';
 
-function LoginButton({to, title, isLogin, w, h}){
+interface LoginButtonProps {
+    to: string,
+    title: string,
+    isLogin: boolean;
+    w: string, h: string
+}
+
+const LoginButton: React.FC<LoginButtonProps> = ({to, title, isLogin, w, h}) => {
     return (
          <> 
             {isLogin ? (

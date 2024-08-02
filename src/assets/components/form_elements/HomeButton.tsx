@@ -1,4 +1,4 @@
-import styles from '../../css/form_elements/HomeButton.module.css'
+import styles from '../../css/form_elements/HomeButton.module.css';
 import { TbLogout2 } from "react-icons/tb";
 import { IoCreateSharp } from "react-icons/io5";
 import { BiLogIn } from "react-icons/bi";
@@ -22,16 +22,29 @@ import { IoMoonOutline } from "react-icons/io5";
 import { BiWorld } from "react-icons/bi";
 import { MdOutlineKeyboard } from "react-icons/md";
 import { GoPerson } from "react-icons/go";
+import { RiHomeSmile2Line } from "react-icons/ri";
+
+
+interface HomeButtonProps {
+    to: string,
+    icon: string,
+    title: string,
+    showName: boolean,
+    w?: string, h?: string
+}
 
 import { Link } from 'react-router-dom';
 
-function HomeButton ({to, icon, title, showName, w, h}){
+const HomeButton: React.FC<HomeButtonProps> =  ({to, icon, title, showName, w, h}) => {
 
 
-    const setIcon = (icon) => {
+    const setIcon = (icon: string) => {
         switch(icon){
             case 'LuSunMoon': 
             return <LuSunMoon className={styles.icon} style={{width: w, height: h}}/>;
+           
+            case 'RiHomeSmile2Line': 
+            return <RiHomeSmile2Line className={styles.icon} style={{width: w, height: h}}/>;
            
             case 'GoPerson': 
             return <GoPerson className={styles.icon} style={{width: w, height: h}}/>;

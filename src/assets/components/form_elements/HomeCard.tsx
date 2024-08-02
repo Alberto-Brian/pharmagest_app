@@ -1,19 +1,19 @@
 import styles from '../../css/form_elements/HomeCard.module.css';
 import { Link } from 'react-router-dom';
+import Truncate from '../utils/Truncate';
 
-function TruncateName({name, limit}){
-    if(name.length <= limit){
-        return name;
-    }
-
-    return name.substring(0, limit) + '...';
+interface HomeCardProps {
+    to: string,
+    image: string,
+    name: string,
+    w: string, h: string
 }
 
-function HomeCard({image, name, w, h}){
+const HomeCard: React.FC<HomeCardProps> = ({to, image, name, w, h}) => {
     return(
-        <Link className={styles.main} style={{width: w, height: h}}>
+        <Link to={to} className={styles.main} style={{width: w, height: h}}>
             <section>
-                {name && <h4>{<TruncateName name={name} limit={18} />}</h4> }
+                {name && <h4>{<Truncate text={name} limit={18} />}</h4> }
                 <img src={image} alt="" />
 
                 <span className={styles.info}>

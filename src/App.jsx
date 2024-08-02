@@ -4,9 +4,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import BR from './helpers/BR.jsx';
 
-import Home0 from './assets/components/pages/Home0.jsx';
-import Home1 from './assets/components/pages/Home1.jsx';
-import Home2 from './assets/components/pages/Home2.jsx';
+import Home0 from './assets/components/pages/Home0.tsx';
+import Home1 from './assets/components/pages/Home1.tsx';
+import Home2 from './assets/components/pages/Home2.tsx';
 import Container from './assets/components/utils/Container.jsx';
 
 let author = 'Alberto Brian'; 

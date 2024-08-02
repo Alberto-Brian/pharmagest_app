@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa";
 import styles from '../../css/form_elements/SearchInput.module.css';
 
-function SearchInput({w, h}){
+interface SearchInputProps { w: string, h: string }
+
+const SearchInput: React.FC<SearchInputProps> = ({w, h}) => {
 
     
     useEffect(() => {
-        const placeholder = document.querySelector('#placeholder');
-        const input = document.querySelector('input');
+        const placeholder = document.querySelector('#placeholder') as HTMLElement;
+        const input = document.querySelector('input') as HTMLInputElement;
         input.addEventListener('input', () => {
             input.style.backgroundColor = 'white';
             if(placeholder) placeholder.style.display = 'none';
-            if(!input.value) placeholder.style.display = 'inline-block';
+            if(!input?.value) placeholder.style.display = 'inline-block';
         })
     }, [])
 

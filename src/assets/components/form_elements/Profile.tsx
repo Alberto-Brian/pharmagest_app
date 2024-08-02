@@ -3,7 +3,14 @@ import { useRef, useEffect } from 'react';
 import person from '../../../../public/person_icon.svg';
 import HomeButton from './HomeButton';
 import Truncate from '../utils/Truncate';
-function Profile({w, h, image}){
+
+interface ProfileProps {
+    w: string,
+    h: string,
+    image: string
+}
+
+const Profile: React.FC<ProfileProps> = ({w, h, image}) => {
 
     const img_profile_ref = useRef(null);
     const btn_profile_ref = useRef(null);
@@ -14,9 +21,9 @@ function Profile({w, h, image}){
     // const [display, setDisplay] = useState(false); 
     useEffect(()=>{
 
-        const btn_profile = document.querySelector('#btn_profile');
-        const view = document.querySelector('#view');
-        const name = document.querySelector('#name');
+        const btn_profile = document.querySelector('#btn_profile') as HTMLElement;
+        const view = document.querySelector('#view') as HTMLElement;
+        const name = document.querySelector('#name') as HTMLElement;
         let display = false;
 
         
@@ -36,11 +43,11 @@ function Profile({w, h, image}){
             show(display)
         })
 
-        function show(display){
+        function show(display: boolean){
                 if(display) {
                             view.style.display = 'flex'
                             view.style.opacity = '1'
-                            btn_profile.style.transform = 'translate(-13.2em, -0.3em)';
+                            btn_profile.style.transform = 'translate(-13.8em, -0.3em)';
                         }
                         else {
                             view.style.display = 'none';
@@ -65,7 +72,7 @@ function Profile({w, h, image}){
             
             <section id='view' className={styles.optionsView} ref={view_profile_ref}>
                 <span id='name' className={styles.profile_name} ref={name_profile_ref}>
-                    <Truncate text='Alberto Kiowa Massanza' limit='22' />
+                    <Truncate text='Alberto Kiowa Massanza' limit={22} />
                 </span>
 
                 <article className={styles.profile_content} ref={view_box_ref}>

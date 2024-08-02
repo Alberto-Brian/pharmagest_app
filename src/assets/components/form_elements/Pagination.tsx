@@ -1,13 +1,23 @@
 import { Link } from 'react-router-dom';
 import styles from '../../css/form_elements/Pagination.module.css';
 
-function Pagination({totalItems, 
+interface PaginationProps {
+    totalItems: number,
+    currentPage: number,
+    pages: number,
+    perPage: number,
+    next: number,
+    prev: number,
+    totalCurrentResults: number
+}
+
+const Pagination: React.FC<PaginationProps> = ({totalItems, 
                      currentPage, 
                      pages, 
                      perPage, 
                      next, 
                      prev, 
-                     totalCurrentResults  }){
+                     totalCurrentResults  }) => {
 
     return (
         <section className={styles.main}>

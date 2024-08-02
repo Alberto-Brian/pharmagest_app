@@ -1,6 +1,8 @@
 import styles from '../../css/form_elements/ProvinceList.module.css';
-import { Link } from 'react-router-dom';
-function ProvinceList({w, h}){
+
+interface ProvinceListProps { w: string, h: string }
+
+const ProvinceList: React.FC<ProvinceListProps> = ({w, h}) => {
     return(
         <select className={styles.main} style={{width: w, height: h}}>
            <option value = 'Bengo'> Todas Farmácias </option>
